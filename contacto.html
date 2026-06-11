@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Merlo Noticias</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <style>
+    h2 {
+      font-size: 1.3rem;
+      border-bottom: 2px solid #e07b39;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    .datos-contacto {
+      background-color: white;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      font-size: 0.92rem;
+      line-height: 1.9;
+    }
+
+    .datos-contacto strong {
+      color: #e07b39;
+    }
+
+    form {
+      background-color: white;
+      border-radius: 6px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    form h3 {
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    label {
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-family: Arial, sans-serif;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: #e07b39;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      background-color: #e07b39;
+      color: white;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #c96a28;
+    }
+
+    .mensaje-ok {
+      display: none;
+      background-color: #d4edda;
+      color: #155724;
+      padding: 12px 16px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Merlo Noticias</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="noticias.html">Noticias</a>
+      <a href="contacto.html" class="activo">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contacto</h2>
+
+    <div class="datos-contacto">
+      <strong> Merlo Noticias</strong><br />
+      Av. Echeverry 1240, Merlo, Buenos Aires<br />
+      <strong>Email:</strong> noticiasmerlo@gmail.com<br />
+      <strong>Teléfono:</strong> +54 9 11 4626-0000<br />
+      <strong>Horario de atención:</strong> Lunes a viernes de 9 a 18hs
+    </div>
+
+    <form id="formContacto">
+      <h3>Envianos un mensaje</h3>
+
+      <div>
+        <label for="nombre">Nombre y apellido</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+      </div>
+
+      <div>
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+      </div>
+
+      <div>
+        <label for="asunto">Asunto</label>
+        <select id="asunto" name="asunto" required>
+          <option value="" disabled selected>Seleccioná una opción</option>
+          <option value="consulta">Consulta general</option>
+          <option value="noticia">Enviar una noticia</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribí tu mensaje acá..." required></textarea>
+      </div>
+
+      <button type="submit">Enviar</button>
+
+      <div class="mensaje-ok" id="mensajeOk">
+        ¡Gracias! Tu mensaje fue enviado correctamente.
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2026 Merlo Noticias - Av. Echeverry 1240, Merlo, Buenos Aires</p>
+  </footer>
+
+ 
+
+</body>
+</html>
